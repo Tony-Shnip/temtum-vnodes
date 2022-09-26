@@ -1,4 +1,4 @@
-# vnodes
+# temtum-vnodes
 
 Vue components to create svg interactive graphs, diagrams or node visual tools.
 
@@ -9,7 +9,7 @@ https://tiagolr.github.io/vnodes/
 ### Install
 
 ```bash
-npm install vnodes
+npm install temtum-vnodes
 ```
 
 ### Get started
@@ -26,7 +26,7 @@ npm install vnodes
 </template>
 ```
 ```js
-import { Screen, Node, Edge, graph } from 'vnodes'
+import { Screen, Node, Edge, graph } from 'temtum-vnodes'
 export default {
   components: {
      Screen,
@@ -179,16 +179,34 @@ svg .edge {
 
 ### Markers
 
-TODO
-routing orth manh metro https://resources.jointjs.com/demos/routing
-theme apply demo
-markers demo
-groups demo
-edge api review
-graph tools, nodes containing edge refs or adj list etc
-graph layouts https://www.yworks.com/products/yfiles/features#layout
-layered layouts https://github.com/erikbrinkman/d3-dag
-layered layouts https://www.yworks.com/pages/layered-graph-layout
-css animations demo/theme https://www.yworks.com/products/yfiles/features
-https://www.edrawmax.com/online/en/
-https://js.cytoscape.org/
+```html
+  <screen ref="screen">
+    <markers :markers="markers">
+    </markers>
+```
+
+```js
+import Markers from 'temtum-vnodes/src/components/Markers.vue'
+
+export default {
+  components: 
+    Markers
+}
+
+data() {
+  return {
+    markers: [
+      {id:'arrow-slim-end-red', type:'arrow-end', scale:0.5, style:'fill: red'} ,
+      {id:'circle-white', type:'circle', scale:1, style:'fill: white'},
+    ],
+  }
+}
+```
+
+```css
+<style>
+  .edge {
+    marker-end: url(#arrow-slim-end-red);
+  }
+</style>
+```
