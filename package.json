@@ -1,5 +1,5 @@
 {
-  "name": "vnodes",
+  "name": "temtum-vnodes",
   "version": "1.1.15",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -8,7 +8,13 @@
     "start": "npm run serve"
   },
   "license": "MIT",
-  "repository": "github:txlabs/vnodes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tony-Shnip/temtum-vnodes"
+  },
+  "publishConfig": {
+    "@Tonu-SHnip:registry":"https://npm.pkg.github.com/Tony-Shnip"
+  },
   "author": {
     "name": "txlabs",
     "email": "txlabs@protonmail.com"
